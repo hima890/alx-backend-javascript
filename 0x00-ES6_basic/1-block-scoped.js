@@ -1,16 +1,13 @@
-#!/usr/bin/node
-// 1-block-scoped.js
-
 export default function taskBlock(trueOrFalse) {
   const task = false;
   const task2 = true;
 
+  /* eslint-disable no-unused-vars */
   if (trueOrFalse) {
-    // Use let so that these variables are only scoped to the if block
-    let task = true;
-    let task2 = false;
+    const task = true;
+    const task2 = false;
   }
+  /* eslint-enable no-unused-vars */
 
   return [task, task2];
 }
-
